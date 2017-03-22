@@ -6,19 +6,19 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     @common_part_title = "The SSSB TDY Application"
   end
   test "should get home" do
-    get static_pages_home_url
+    get root_path
     assert_response :success
     assert_select "title", full_title
   end
 
   test "should get help" do
-    get static_pages_help_url
+    get help_path
     assert_response :success
     assert_select "title", full_title("Help")
   end
   
   test 'should get about' do
-    get static_pages_about_url
+    get about_path
     assert_response :success
     assert_select "title", full_title("About")
   end
