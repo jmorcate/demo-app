@@ -11,6 +11,13 @@
                <%= f.label :password %>
                <%= f.password_field :password, class:'form-control' %>
            </div>
+           
+           
+            <%= f.label :remember_me do %>
+                <%= f.check_box :remember_me %>
+                Remember me on this computer
+            <% end %>
+           
            <%= f.submit "Log in", class:'btn btn-primary form-control' %>
         <% end %>
         <p>Not yet a member <%= link_to "Sign up now!", signup_path %></p>
